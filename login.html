@@ -1,0 +1,180 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Important to make website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+
+    <!-- Link our CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+  <style>
+    /* Login section styling */
+    .login .container {
+      max-width: 600px; /* Increased width */
+      margin: 60px auto;
+      padding: 25px 30px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-family: Arial, sans-serif;
+    }
+
+    .login h2.text-center {
+      text-align: center;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .heading-border {
+      width: 60px;
+      height: 3px;
+      background-color: #ff6f61;
+      margin: 0 auto 25px auto;
+      border-radius: 2px;
+    }
+
+    form.form fieldset {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 20px;
+    }
+
+    form.form legend {
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 0 10px;
+      color: #444;
+    }
+
+    form.form p.label {
+      margin-top: 15px;
+      font-weight: 600;
+      color: #555;
+    }
+
+    form.form input[type="email"],
+    form.form input[type="password"] {
+      width: 100%;
+      padding: 10px 12px;
+      margin-top: 6px;
+      border: 1px solid #bbb;
+      border-radius: 5px;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    form.form input[type="email"]:focus,
+    form.form input[type="password"]:focus {
+      border-color: #ff6f61;
+    }
+
+    form.form input.btn-primary {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      font-size: 18px;
+      font-weight: 700;
+      background-color: #ff6f61;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form.form input.btn-primary:hover {
+      background-color: #e85b4f;
+    }
+
+  </style>
+<body>
+
+   <!-- Navbar Section Starts Here -->
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="images/logo.png" alt="Restaurant Logo" class="img-responsive">
+                </a>
+            </div>
+
+          
+         <div class="menu text-right">
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="categories.html">Categories</a>
+        </li>
+        <li>
+            <a href="foods.html">Foods</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+        <li>
+            <a href="login.html">Login</a>
+        </li>
+        <li>
+            <a href="order.html">Order</a>
+        </li>
+    </ul>
+</div>
+
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- Navbar Section Ends Here -->
+
+  <!-- Login Section start -->
+  <section class="login">
+    <div class="container">
+      <h2 class="text-center">Login</h2>
+      <div class="heading-border"></div>
+      <form action="" class="form">
+        <fieldset>
+          <legend>Login</legend>
+          <p class="label">Email</p>
+          <input type="email" placeholder="Enter your email..." required />
+          <p class="label">Password</p>
+          <input type="password" placeholder="Enter your password..." required />
+          <input type="submit" value="Login" class="btn-primary" />
+        </fieldset> 
+      </form>
+    </div>
+  </section>
+
+  <!-- Login Section end -->
+
+
+     <!-- social Section Starts Here -->
+    <section class="social">
+        <div class="container text-center">
+            <ul>
+          <li><a href="#"><img src="https://img.icons8.com/color/48/null/facebook-new.png"/></a></li>
+           <li><a href="#"><img src="https://img.icons8.com/fluency/48/null/instagram-new.png"/></a></li>
+           <li><a href="#"><img src="https://img.icons8.com/color/48/null/twitter--v1.png"/></a></li>
+            <li><a href="#"><img src="https://img.icons8.com/color/48/null/linkedin-circled--v1.png"/></a></li>
+            <li><a href="#"><img src="https://img.icons8.com/color/48/null/youtube-play.png"/></a></li>
+    </ul>
+        </div>
+    </section>
+    <!-- social Section Ends Here -->
+
+    <!-- footer Section Starts Here -->
+    <section class="footer">
+        <div class="container text-center">
+            <p>All rights reserved. Designed By <a href="#">Sandhya Bhat</a></p>
+        </div>
+    </section>
+    <!-- footer Section Ends Here -->
+</body>
+</html>
+

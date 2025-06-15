@@ -1,0 +1,300 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Important to make website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+
+    <!-- Link our CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+  
+<body>
+
+   <!-- Navbar Section Starts Here -->
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="images/logo.png" alt="Restaurant Logo" class="img-responsive">
+                </a>
+            </div>
+
+          
+         <div class="menu text-right">
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="categories.html">Categories</a>
+        </li>
+        <li>
+            <a href="foods.html">Foods</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+        <li>
+            <a href="login.html">Login</a>
+        </li>
+        <li>
+            <a href="order.html">Order</a>
+        </li>
+    </ul>
+</div>
+
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- Navbar Section Ends Here -->
+       
+
+
+      <style>
+    /* Table wrapper with left-right margin */
+    .table-wrapper {
+      max-width: 100%;
+      overflow-x: auto;
+      margin: 40px 20px 20px 20px; /* top 40px, sides 20px, bottom 20px */
+    }
+
+    table {
+      width: 100%;
+      min-width: 600px;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+    }
+    table th, table td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    table th {
+      background-color: #f4f4f4;
+      font-weight: 600;
+    }
+    tfoot tr td {
+      font-weight: 700;
+      background-color: #f9f9f9;
+      text-align: right;
+    }
+    tfoot tr td.total-label {
+      text-align: right;
+      padding-right: 20px;
+    }
+    .btn-remove {
+      background-color: #ff6f61;
+      border: none;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .btn-remove:hover {
+      background-color: #e85b4f;
+    }
+
+    /* Borders to left of Sr. No. and right of Action */
+    table th:first-child,
+    table td:first-child {
+      border-left: 2px solid #333;
+    }
+    table th:last-child,
+    table td:last-child {
+      border-right: 2px solid #333;
+    }
+
+    /* Delivery Details styling */
+    .delivery-details .container {
+      max-width: 600px;
+      margin: 40px auto 60px auto;
+      padding: 25px 30px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-family: Arial, sans-serif;
+    }
+    .delivery-details h2.text-center {
+      text-align: center;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #333;
+    }
+    .heading-border {
+      width: 60px;
+      height: 3px;
+      background-color: #ff6f61;
+      margin: 0 auto 25px auto;
+      border-radius: 2px;
+    }
+    form.form fieldset {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 20px;
+    }
+    form.form legend {
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 0 10px;
+      color: #444;
+    }
+    form.form p.label {
+      margin-top: 15px;
+      font-weight: 600;
+      color: #555;
+      text-align: left;
+    }
+    form.form input[type="text"],
+    form.form input[type="tel"],
+    form.form input[type="email"] {
+      width: 100%;
+      padding: 10px 12px;
+      margin-top: 6px;
+      border: 1px solid #bbb;
+      border-radius: 5px;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s ease;
+      box-sizing: border-box;
+    }
+    form.form input[type="text"]:focus,
+    form.form input[type="tel"]:focus,
+    form.form input[type="email"]:focus {
+      border-color: #ff6f61;
+    }
+    form.form input.btn-primary {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      font-size: 18px;
+      font-weight: 700;
+      background-color: #ff6f61;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form.form input.btn-primary:hover {
+      background-color: #e85b4f;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="table-wrapper">
+    <table id="orderTable">
+      <thead>
+        <tr>
+          <th>Sr. No.</th>
+          <th>Food Item</th>
+          <th>Quantity</th>
+          <th>Price (Rs.)</th>
+          <th>Total (Rs.)</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Pizza</td><td>2</td><td>500</td><td>1000</td><td><button class="btn-remove">Remove</button></td></tr>
+        <tr><td>2</td><td>Burger</td><td>1</td><td>100</td><td>100</td><td><button class="btn-remove">Remove</button></td></tr>
+        <tr><td>3</td><td>Momo</td><td>3</td><td>200</td><td>600</td><td><button class="btn-remove">Remove</button></td></tr>
+        <tr><td>4</td><td>Chowmein</td><td>2</td><td>100</td><td>200</td><td><button class="btn-remove">Remove</button></td></tr>
+        <tr><td>5</td><td>Sekuwa</td><td>1</td><td>350</td><td>350</td><td><button class="btn-remove">Remove</button></td></tr>
+        <tr><td>6</td><td>Panipuri</td><td>2</td><td>100</td><td>200</td><td><button class="btn-remove">Remove</button></td></tr>
+        <tr><td>7</td><td>Laphing</td><td>1</td><td>150</td><td>150</td><td><button class="btn-remove">Remove</button></td></tr>
+        <tr><td>8</td><td>Biryani</td><td>1</td><td>400</td><td>400</td><td><button class="btn-remove">Remove</button></td></tr>
+        <tr><td>9</td><td>Pasta</td><td>3</td><td>250</td><td>750</td><td><button class="btn-remove">Remove</button></td></tr>
+        <tr><td>10</td><td>Sandwich</td><td>2</td><td>150</td><td>300</td><td><button class="btn-remove">Remove</button></td></tr>
+        <tr><td>11</td><td>Cold Coffee</td><td>4</td><td>350</td><td>1400</td><td><button class="btn-remove">Remove</button></td></tr>
+        <tr><td>12</td><td>Samosa</td><td>2</td><td>50</td><td>100</td><td><button class="btn-remove">Remove</button></td></tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4" class="total-label">Grand Total</td>
+          <td id="grandTotal">0</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <section class="delivery-details">
+    <div class="container">
+      <h2 class="text-center">Delivery Details</h2>
+      <div class="heading-border"></div>
+      <form action="" class="form">
+        <fieldset>
+          <legend>Delivery Information</legend>
+          <p class="label">Full Name</p>
+          <input type="text" placeholder="Enter your name..." required />
+          <p class="label">Phone Number</p>
+          <input type="tel" placeholder="Enter your phone..." required />
+          <p class="label">Email</p>
+          <input type="email" placeholder="Enter your email..." required />
+          <p class="label">Address</p>
+          <input type="text" placeholder="Enter your address..." required />
+          <input type="submit" value="Confirm Order" class="btn-primary" />
+        </fieldset>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    function updateGrandTotal() {
+      let total = 0;
+      const rows = document.querySelectorAll('#orderTable tbody tr');
+      rows.forEach(row => {
+        total += Number(row.cells[4].textContent);
+      });
+      document.getElementById('grandTotal').textContent = total.toFixed(2);
+    }
+
+    document.querySelectorAll('.btn-remove').forEach(button => {
+      button.addEventListener('click', function() {
+        const row = this.closest('tr');
+        row.remove();
+
+        // Re-number Sr. No.
+        const rows = document.querySelectorAll('#orderTable tbody tr');
+        rows.forEach((r, i) => {
+          r.cells[0].textContent = i + 1;
+        });
+
+        updateGrandTotal();
+      });
+    });
+
+    updateGrandTotal();
+  </script>
+
+
+
+     <!-- social Section Starts Here -->
+    <section class="social">
+        <div class="container text-center">
+            <ul>
+          <li><a href="#"><img src="https://img.icons8.com/color/48/null/facebook-new.png"/></a></li>
+           <li><a href="#"><img src="https://img.icons8.com/fluency/48/null/instagram-new.png"/></a></li>
+           <li><a href="#"><img src="https://img.icons8.com/color/48/null/twitter--v1.png"/></a></li>
+            <li><a href="#"><img src="https://img.icons8.com/color/48/null/linkedin-circled--v1.png"/></a></li>
+            <li><a href="#"><img src="https://img.icons8.com/color/48/null/youtube-play.png"/></a></li>
+    </ul>
+        </div>
+    </section>
+    <!-- social Section Ends Here -->
+
+    <!-- footer Section Starts Here -->
+    <section class="footer">
+        <div class="container text-center">
+            <p>All rights reserved. Designed By <a href="#">Sandhya Bhat</a></p>
+        </div>
+    </section>
+    <!-- footer Section Ends Here -->
+</body>
+</html>
+
